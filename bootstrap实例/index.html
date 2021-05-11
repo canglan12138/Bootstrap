@@ -76,15 +76,15 @@
 				<li><a href="#">简述</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">特点 <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Chrome</a></li>
-						<li><a href="#">Firefox</a></li>
-						<li><a href="#">Safari</a></li>
-						<li><a href="#">Opear</a></li>
-						<li><a href="#">IE</a></li>
+					<ul class="dropdown-menu" id="damu-nav">
+						<li><a href="#chrome">Chrome</a></li>
+						<li><a href="#firefox">Firefox</a></li>
+						<li><a href="#safari">Safari</a></li>
+						<li><a href="#opera">Opera</a></li>
+						<li><a href="#ie">IE</a></li>
 					</ul>
 				</li>
-				<li><a href="#">关于</a></li>
+				<li><a href="javascript:;" data-target="#myModal" data-toggle="modal">关于</a></li>
 			</ul>
 		</div>
 	</div>
@@ -183,11 +183,11 @@
 </div>
 
 <!--标签页-->
-<div class="container">
+<div class="container" id="damu-tab">
 	<div>
 
 		<!-- Nav tabs -->
-		<ul class="nav nav-tabs" role="tablist">
+		<ul class="nav nav-tabs" role="tablist" id="damu-list">
 			<li role="presentation" class="active"><a href="#chrome" aria-controls="home" role="tab" data-toggle="tab">chrome</a></li>
 			<li role="presentation"><a href="#firefox" aria-controls="profile" role="tab" data-toggle="tab">firefox</a></li>
 			<li role="presentation"><a href="#safari" aria-controls="messages" role="tab" data-toggle="tab">safari</a></li>
@@ -200,11 +200,11 @@
 			<div role="tabpanel" class="tab-pane active" id="chrome">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-7">
+						<div class="col-md-7">
 							<h2>IE 你懂的</h2>
 							<p>Internet Explorer，原称Microsoft Internet Explorer(6版本以前)和Windows Internet Explorer(7，8，9，10版本)， 简称IE，是美国微软公司推出的一款网页浏览器。它采用的排版引擎(俗称内核)为Trident。</p>
 						</div>
-						<div class="col-lg-5">
+						<div class="col-md-5">
 							<img src="./images/chrome-logo.jpg" alt="">
 						</div>
 					</div>
@@ -213,10 +213,10 @@
 			<div role="tabpanel" class="tab-pane" id="firefox">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-5">
+						<div class="col-md-5">
 							<img src="./images/firefox-logo.jpg" alt="">
 						</div>
-						<div class="col-lg-7">
+						<div class="col-md-7">
 							<h2>IE 你懂的</h2>
 							<p>Internet Explorer，原称Microsoft Internet Explorer(6版本以前)和Windows Internet Explorer(7，8，9，10版本)， 简称IE，是美国微软公司推出的一款网页浏览器。它采用的排版引擎(俗称内核)为Trident。</p>
 						</div>
@@ -226,11 +226,11 @@
 			<div role="tabpanel" class="tab-pane" id="safari">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-7">
+						<div class="col-md-7">
 							<h2>IE 你懂的</h2>
 							<p>Internet Explorer，原称Microsoft Internet Explorer(6版本以前)和Windows Internet Explorer(7，8，9，10版本)， 简称IE，是美国微软公司推出的一款网页浏览器。它采用的排版引擎(俗称内核)为Trident。</p>
 						</div>
-						<div class="col-lg-5">
+						<div class="col-md-5">
 							<img src="./images/safari-logo.jpg" alt="">
 						</div>
 					</div>
@@ -239,10 +239,10 @@
 			<div role="tabpanel" class="tab-pane" id="opera">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-5">
+						<div class="col-md-5">
 							<img src="./images/opera-logo.jpg" alt="">
 						</div>
-						<div class="col-lg-7">
+						<div class="col-md-7">
 							<h2>IE 你懂的</h2>
 							<p>Internet Explorer，原称Microsoft Internet Explorer(6版本以前)和Windows Internet Explorer(7，8，9，10版本)， 简称IE，是美国微软公司推出的一款网页浏览器。它采用的排版引擎(俗称内核)为Trident。</p>
 						</div>
@@ -252,17 +252,16 @@
 			<div role="tabpanel" class="tab-pane" id="ie">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-7">
+						<div class="col-md-7">
 							<h2>IE 你懂的</h2>
 							<p>Internet Explorer，原称Microsoft Internet Explorer(6版本以前)和Windows Internet Explorer(7，8，9，10版本)， 简称IE，是美国微软公司推出的一款网页浏览器。它采用的排版引擎(俗称内核)为Trident。</p>
 						</div>
-						<div class="col-lg-5">
+						<div class="col-md-5">
 							<img src="./images/ie-logo.jpg" alt="">
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 
@@ -273,10 +272,40 @@
 	&copy;byLG
 </div>
 
+<!--模态框-->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<p>我是模态框</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-<script src="./js/jquery-3.6.0.js"></script>
+<script src="./js/jquery.min.js"></script>
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="./js/bootstrap.js"></script>
 <!---->
+
+<script>
+	$(function () {
+    $("#damu-nav > li > a").click(function(e){
+      var href = $(this).attr("href");
+      $("#damu-list > li > a[href="+(href)+"]").tab('show');
+      $(document).scrollTop($("#damu-tab").offset().top);
+      e.preventDefault();
+    })
+  })
+</script>
 </body>
 </html>

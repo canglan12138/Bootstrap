@@ -301,7 +301,7 @@
 	$(function () {
     $("#damu-nav > li > a").click(function(e){
       var href = $(this).attr("href");
-      $("#damu-list > li > a[href="+(href)+"]").tab('show');
+      $('#damu-list > li > a[href=' + href + ']').tab('show');
       $(document).scrollTop($("#damu-tab").offset().top);
       e.preventDefault();
     })
